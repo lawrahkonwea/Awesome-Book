@@ -6,7 +6,14 @@ const bookList = document.querySelector('.books');
 
 let bookArray = [];
 
-function allBooks() {
+class book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+class UI{
+  static allBooks() {
   addButton.addEventListener('click', () => {
     bookList.innerHTML = '';
     for (let i = 0; i < bookArray.length; i += 1) {
@@ -14,7 +21,7 @@ function allBooks() {
     <div class="book">
     <p class="title">${bookArray[i].title}</p>
     <p class="author">${bookArray[i].author}</p>
-    <button class="remove" onclick="removeBook(${i})">Remove</button><hr>
+    <button class="remove" onclick="UI.removeBook(${i})">Remove</button><hr>
     </div>
     `;
       title.value = '';
@@ -22,11 +29,18 @@ function allBooks() {
     }
   });
 }
+  static removeBook(item) {
+    bookArray.splice(item, 1);
+    UI.allBooks();
+    localStorage.setItem('allBooks', JSON.stringify(bookArray));
+  }
+
+}
 
 addButton.addEventListener('click', () => {
-  const book = { title: title.value, author: author.value };
-  bookArray.push(book);
-  allBooks();
+  const newBook = new book(title.value, author.value);
+  bookArray.push(newBook);
+  UI.allBooks();
   localStorage.setItem('allBooks', JSON.stringify(bookArray));
 });
 
@@ -34,11 +48,7 @@ window.onload = () => {
   if (localStorage.getItem('allBooks')) {
     bookArray = JSON.parse(localStorage.getItem('allBooks'));
   }
-  allBooks();
+  UI.allBooks();
 };
 
-function removeBook(item) {
-  bookArray.splice(item, 1);
-  allBooks();
-  localStorage.setItem('allBooks', JSON.stringify(bookArray));
-}
+
