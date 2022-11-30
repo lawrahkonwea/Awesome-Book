@@ -6,19 +6,19 @@ const bodyT = document.querySelector('.body-two');
 const bodyS = document.querySelector('.body-three');
 
 first.addEventListener('click', () => {
-    body0.style.display = 'block';
-    bodyT.style.display = 'none';
-    bodyS.style.display = 'none';
+  body0.style.display = 'block';
+  bodyT.style.display = 'none';
+  bodyS.style.display = 'none';
 });
 
 second.addEventListener('click', () => {
-    body0.style.display = 'none';
-    bodyT.style.display = 'block';
-    bodyS.style.display = 'none';
+  body0.style.display = 'none';
+  bodyT.style.display = 'block';
+  bodyS.style.display = 'none';
 });
 
 third.addEventListener('click', () => {
-    body0.style.display = 'none';
-    bodyT.style.display = 'none';
-    bodyS.style.display = 'block';
+  body0.style.display = 'none';
+  bodyT.style.display = 'none';
+  bodyS.style.display = 'block';
 });

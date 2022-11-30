@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.2em; 
+  font-size: 1.2em;
 }
 
 .links {
@@ -50,7 +50,6 @@ body {
   padding: 5px 15px;
   border-radius: 7px;
 }
-
 
 .table button {
   align-self: flex-end;
