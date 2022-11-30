@@ -21,8 +21,8 @@ class UI {
     <td> "${book.title}" by ${book.author}  <button><a href="#" class="remove-btn">Remove</button></td>
     </div>
     `;
-
     list.appendChild(row);
+
     localStorage.setItem('bookList', JSON.stringify(book));
   }
 
