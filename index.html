@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Awesome Book</title>
+    <script src="./javascript/app.js" defer></script>
+    <script src="./javascript/script.js" defer></script>
 </head>
 <body>
 <nav class="navigation">
     <div class="logo"><p>Awesome Books</p></div>
     <div class="links">
-        <button class="list">List</button>
-        <button class="add-new">Add New</button>
-        <button class="contact">Contact</button>
+        <button class="list"><a href="#one" id="one">List</a></button>
+        <button class="add-new"><a href="#two" id="two">Add New</a></button>
+        <button class="contact"><a href="#three" id="three">Contact</a> </button>
     </div>
 </nav>
 <p class="date"></p>
+<section id="one" class="body-one">
     <div class="container">
         <h1>All awesome books</h1>
         <table class="table">
@@ -29,6 +32,10 @@
             <tbody id="book-list"></tbody>
         </table>
         <hr>
+    </div>
+</section>
+<section id="two" class="body-two">
+    <div class="container">
         <div class="form">
             <h1>Add a new book</h1>
         <form action="" id="book-form">
@@ -44,6 +51,8 @@
         </form>
         </div>
     </div>
+</section>
+<section id="three" class="body-three">
 <div class="contact">
     <h1>Contact Information</h1>
     <p>Do you have questions or do you want to say "Hello"?<br>You can reach out to us!</p>
@@ -53,9 +62,9 @@
         <li>Our address: Streetname 22, 85073 City, Country</li>
     </ul>
 </div>
+</section>
 <footer>
     <p>&copy; Copyrights Reserved</p>
 </footer>
-    <script src="script.js"></script>
 </body>
 </html>

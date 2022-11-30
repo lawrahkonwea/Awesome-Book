@@ -2,10 +2,23 @@
   margin: 0;
   padding: 0;
   font-family: "Comic Sans MS", sans-serif;
+  text-decoration: none;
 }
 
 body {
   background-color: saddlebrown;
+}
+
+.body-one {
+  display: none;
+}
+
+.body-two {
+  display: block;
+}
+
+.body-three {
+  display: none;
 }
 
 .navigation {
@@ -15,8 +28,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.2em;
-  color: saddlebrown;
+  font-size: 1.2em; 
 }
 
 .links {
@@ -25,6 +37,7 @@ body {
   width: auto;
   align-items: center;
   justify-content: space-between;
+  color: saddlebrown;
 }
 
 .navigation button {
@@ -37,6 +50,7 @@ body {
   padding: 5px 15px;
   border-radius: 7px;
 }
+
 
 .table button {
   align-self: flex-end;
@@ -63,7 +77,7 @@ footer {
   background-color: white;
   display: flex;
   color: saddlebrown;
-  margin-bottom: 20px;
+  bottom: 0;
 }
 
 .container {
