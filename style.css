@@ -21,6 +21,11 @@ body {
   display: none;
 }
 
+.logo p {
+  color: saddlebrown;
+  font-size: 1.2em;
+}
+
 .navigation {
   margin-top: 20px;
   padding: 10px 15%;
@@ -59,6 +64,20 @@ body {
   padding: 10px 20px;
 }
 
+.links button a {
+  color: saddlebrown;
+}
+
+.table button a {
+  text-decoration: none;
+  font-size: 1.4em;
+  color: white;
+}
+
+.links button a:hover {
+  color: white;
+}
+
 .navigation button:hover {
   background-color: saddlebrown;
   color: white;
@@ -72,11 +91,14 @@ body {
 }
 
 footer {
+  width: 100%;
   padding: 10px 20%;
   background-color: white;
   display: flex;
   color: saddlebrown;
   bottom: 0;
+  position: fixed;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -119,12 +141,6 @@ footer {
 
 .table tbody:nth-child(odd) {
   background-color: #642f08;
-}
-
-.table button a {
-  text-decoration: none;
-  font-size: 1.4em;
-  color: white;
 }
 
 .table button a:hover,
